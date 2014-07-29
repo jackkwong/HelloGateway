@@ -26,6 +26,7 @@
 		84B30F8D198790D9004F6485 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B30F8C198790D9004F6485 /* QuartzCore.framework */; };
 		84B30F991987BDEC004F6485 /* JKLABPaginationSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B30F981987BDEC004F6485 /* JKLABPaginationSegmentedControl.m */; };
 		84B30F9C1987C3C5004F6485 /* JKLABRoundRectShadowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B30F9B1987C3C5004F6485 /* JKLABRoundRectShadowButton.m */; };
+		84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B30FA11987D2F6004F6485 /* JKLABProductViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		84B30F981987BDEC004F6485 /* JKLABPaginationSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABPaginationSegmentedControl.m; sourceTree = "<group>"; };
 		84B30F9A1987C3C5004F6485 /* JKLABRoundRectShadowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABRoundRectShadowButton.h; sourceTree = "<group>"; };
 		84B30F9B1987C3C5004F6485 /* JKLABRoundRectShadowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABRoundRectShadowButton.m; sourceTree = "<group>"; };
+		84B30FA01987D2F6004F6485 /* JKLABProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABProductViewController.h; sourceTree = "<group>"; };
+		84B30FA11987D2F6004F6485 /* JKLABProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABProductViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				842387021987762500074A56 /* JKLABAppDelegate.h */,
 				842387031987762500074A56 /* JKLABAppDelegate.m */,
 				842387051987762500074A56 /* Main.storyboard */,
+				84B30FA01987D2F6004F6485 /* JKLABProductViewController.h */,
+				84B30FA11987D2F6004F6485 /* JKLABProductViewController.m */,
 				842387081987762500074A56 /* JKLABViewController.h */,
 				842387091987762500074A56 /* JKLABViewController.m */,
 				8423870B1987762500074A56 /* Images.xcassets */,
@@ -321,6 +326,7 @@
 				84B30F991987BDEC004F6485 /* JKLABPaginationSegmentedControl.m in Sources */,
 				84B30F9C1987C3C5004F6485 /* JKLABRoundRectShadowButton.m in Sources */,
 				842387001987762500074A56 /* main.m in Sources */,
+				84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */,
 				842387041987762500074A56 /* JKLABAppDelegate.m in Sources */,
 				8423870A1987762500074A56 /* JKLABViewController.m in Sources */,
 				84B30F8A19879040004F6485 /* JKLABRoundRectButton.m in Sources */,
