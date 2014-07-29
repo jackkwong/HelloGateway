@@ -33,7 +33,6 @@
 {
     CALayer *layer = self.layer;
     layer.cornerRadius = 3;
-    [layer setNeedsDisplay];
 }
 
 /*
