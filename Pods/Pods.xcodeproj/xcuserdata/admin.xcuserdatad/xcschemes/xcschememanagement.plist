@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-HelloPOS-ChuzzleKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HelloPOS-OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HelloPOS-PromiseKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HelloPOS-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-HelloPOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>33C0DC32B230401B93124649</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D7D90A512E2462888B9DE7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B69AE1D4951246D18FDE221E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB6BF8A622B34CCAB8267859</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E90DB8A9ABC348379D8FD962</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
