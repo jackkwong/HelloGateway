@@ -94,23 +94,49 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-w4-MJu" customClass="JKLABRoundRectButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-w4-MJu" customClass="JKLABRoundRectButton">
                                 <rect key="frame" x="15" y="80" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ftq-FA-daL"/>
+                                    <constraint firstAttribute="width" constant="40" id="vsZ-vs-Wqu"/>
+                                </constraints>
                                 <state key="normal" image="hamburger">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-lE-5cC">
+                                <rect key="frame" x="70" y="80" width="604" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="B6m-4P-keK"/>
+                                    <constraint firstAttribute="width" constant="604" id="V5L-Gr-DXc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.94117653369903564" green="0.94117653369903564" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="y1B-lE-5cC" firstAttribute="leading" secondItem="X2K-w4-MJu" secondAttribute="trailing" constant="15" id="R6a-1K-fYN"/>
+                            <constraint firstItem="X2K-w4-MJu" firstAttribute="top" secondItem="y1B-lE-5cC" secondAttribute="top" id="U78-hv-dSG"/>
+                            <constraint firstItem="X2K-w4-MJu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="ZvD-dX-jM9"/>
+                            <constraint firstItem="X2K-w4-MJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="etV-zy-QVX"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="lZO-ON-YdD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="296"/>
+            <point key="canvasLocation" x="464" y="296"/>
         </scene>
     </scenes>
     <resources>
