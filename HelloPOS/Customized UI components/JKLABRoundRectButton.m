@@ -33,7 +33,7 @@
 {
     NSLog(@"JKROUNDRECTBUTTON!");
     CALayer *layer = self.layer;
-    layer.cornerRadius = 4;
+    layer.cornerRadius = 3;
     [layer setNeedsDisplay];
 }
 
