@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28BC6597198806B900035A3E /* JKLABProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6596198806B900035A3E /* JKLABProductCell.m */; };
 		62863D6F9AD6453C9B20AC90 /* libPods-HelloPOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D738E9EB29F4CB2B9106109 /* libPods-HelloPOS.a */; };
 		842386F41987762500074A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842386F31987762500074A56 /* Foundation.framework */; };
 		842386F61987762500074A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842386F51987762500074A56 /* CoreGraphics.framework */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		0D738E9EB29F4CB2B9106109 /* libPods-HelloPOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloPOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28BC6595198806B900035A3E /* JKLABProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABProductCell.h; sourceTree = "<group>"; };
+		28BC6596198806B900035A3E /* JKLABProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABProductCell.m; sourceTree = "<group>"; };
 		6ED98DDAE39B486780818884 /* Pods-HelloPOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloPOS.xcconfig"; path = "Pods/Pods-HelloPOS.xcconfig"; sourceTree = "<group>"; };
 		842386F01987762500074A56 /* HelloPOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloPOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842386F31987762500074A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28BC659919880A7600035A3E /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		842386E71987762500074A56 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,8 @@
 				842387021987762500074A56 /* JKLABAppDelegate.h */,
 				842387031987762500074A56 /* JKLABAppDelegate.m */,
 				842387051987762500074A56 /* Main.storyboard */,
+				28BC6595198806B900035A3E /* JKLABProductCell.h */,
+				28BC6596198806B900035A3E /* JKLABProductCell.m */,
 				84B30FA01987D2F6004F6485 /* JKLABProductViewController.h */,
 				84B30FA11987D2F6004F6485 /* JKLABProductViewController.m */,
 				842387081987762500074A56 /* JKLABViewController.h */,
@@ -151,6 +163,7 @@
 		842386FA1987762500074A56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28BC659919880A7600035A3E /* images */,
 				842386FB1987762500074A56 /* HelloPOS-Info.plist */,
 				842386FC1987762500074A56 /* InfoPlist.strings */,
 				842386FF1987762500074A56 /* main.m */,
@@ -325,6 +338,7 @@
 			files = (
 				84B30F991987BDEC004F6485 /* JKLABPaginationSegmentedControl.m in Sources */,
 				84B30F9C1987C3C5004F6485 /* JKLABRoundRectShadowButton.m in Sources */,
+				28BC6597198806B900035A3E /* JKLABProductCell.m in Sources */,
 				842387001987762500074A56 /* main.m in Sources */,
 				84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */,
 				842387041987762500074A56 /* JKLABAppDelegate.m in Sources */,
