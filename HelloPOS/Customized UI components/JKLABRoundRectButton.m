@@ -31,7 +31,6 @@
 
 - (void)customizeAppearance
 {
-    NSLog(@"JKROUNDRECTBUTTON!");
     CALayer *layer = self.layer;
     layer.cornerRadius = 3;
     [layer setNeedsDisplay];
