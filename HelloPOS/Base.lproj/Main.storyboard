@@ -59,6 +59,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="tht-8R-DDv" kind="modal" identifier="SelectCustomer" id="YUv-SS-1JC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9v-eb-Vcf" customClass="JKLABRoundRectButton">
                                         <rect key="frame" x="0.0" y="345" width="320" height="100"/>
@@ -161,6 +164,46 @@
             </objects>
             <point key="canvasLocation" x="464" y="296"/>
         </scene>
+        <!--Select Customer Table View Controller - Select Customer-->
+        <scene sceneID="RI9-L8-Rfp">
+            <objects>
+                <tableViewController id="tht-8R-DDv" customClass="JKLABSelectCustomerTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="SVJ-lp-kPX">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CustomerNameRow" textLabel="ARh-Ng-Iui" style="IBUITableViewCellStyleDefault" id="2ic-oe-jFA">
+                                <rect key="frame" x="0.0" y="22" width="1024" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ic-oe-jFA" id="A3K-Bo-yG6">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ARh-Ng-Iui">
+                                            <rect key="frame" x="15" y="0.0" width="994" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="tht-8R-DDv" id="wfK-lE-va8"/>
+                            <outlet property="delegate" destination="tht-8R-DDv" id="mzI-kQ-8hE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select Customer" id="v4A-ND-cXx"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VlM-aU-iIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="-319"/>
+        </scene>
         <!--Product View Controller-->
         <scene sceneID="ztj-iw-GJ6">
             <objects>
@@ -236,7 +279,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XhU-oa-ezn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1934" y="378"/>
+            <point key="canvasLocation" x="1722" y="860"/>
         </scene>
     </scenes>
     <resources>

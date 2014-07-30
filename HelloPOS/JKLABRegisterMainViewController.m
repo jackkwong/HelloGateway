@@ -8,6 +8,7 @@
 
 #import "JKLABRegisterMainViewController.h"
 #import "JKLABProductViewController.h"
+#import "JKLABSelectCustomerTableViewController.h"
 
 @interface JKLABRegisterMainViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *uiProductQuantityLabel;
@@ -58,6 +59,21 @@
         controller.productData = dummyProductData;
         controller.registerMainViewController = self;
         
+    }else if ([segue.identifier isEqualToString:@"SelectCustomer"]){
+        
+        NSArray *dummyCustomerData = @[
+                                      
+                                      @{@"id": @"5", @"name": @"Brad Lauster"},
+                                      @{@"id": @"6", @"name": @"David Bozin"},
+                                      @{@"id": @"4", @"name": @"Irene Chan"},
+                                      @{@"id": @"3", @"name": @"Jason Ngan"},
+                                      @{@"id": @"2", @"name": @"Jack Kwong"}
+                                      
+                                      ];
+        
+        JKLABSelectCustomerTableViewController *controller = segue.destinationViewController;
+        controller.customerData = dummyCustomerData;
+        controller.registerMainViewController = self;
     }
 }
 
@@ -65,7 +81,7 @@
 - (IBAction)actionProcessSales:(id)sender {
 }
 - (IBAction)actionResetSales:(id)sender {
-    self.model.productsInCart = @[].mutableCopy;
+    [self.model clearData];
     [self updateViewWithModel];
 }
 - (IBAction)actionPushToQuickBooks:(id)sender {

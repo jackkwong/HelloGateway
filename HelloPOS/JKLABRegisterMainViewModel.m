@@ -10,13 +10,14 @@
 
 @implementation JKLABRegisterMainViewModel
 @synthesize productsInCart;
+@synthesize customerId;
 
 - (id)init
 {
     self = [super init];
     
     if (self) {
-        self.productsInCart = @[].mutableCopy;
+        [self clearData];
     }
     
     return self;
@@ -37,6 +38,12 @@
     }
     
     return totalPrice;
+}
+
+- (void)clearData
+{
+    productsInCart = @[].mutableCopy;
+    customerId = nil;
 }
 
 @end
