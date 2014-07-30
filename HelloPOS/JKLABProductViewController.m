@@ -92,6 +92,7 @@
     NSLog(@"%@", product);
     [self.registerMainViewController.model.productsInCart addObject:product];
     NSLog(@"%f", [self.registerMainViewController.model checkoutPrice]);
+    NSLog(@"%d", self.registerMainViewController.model.numberOfProductsInCart);
 }
 
 

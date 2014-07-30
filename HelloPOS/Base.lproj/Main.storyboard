@@ -143,6 +143,10 @@
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="lZO-ON-YdD"/>
+                    <connections>
+                        <outlet property="uiCheckoutPriceLabel" destination="WBw-1A-y8R" id="QqX-C5-lEK"/>
+                        <outlet property="uiProductQuantityLabel" destination="zp0-Un-VnB" id="Kml-Xr-0yK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

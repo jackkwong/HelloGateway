@@ -10,6 +10,8 @@
 #import "JKLABProductViewController.h"
 
 @interface JKLABRegisterMainViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *uiProductQuantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *uiCheckoutPriceLabel;
 
 @end
 
@@ -20,6 +22,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.model = [[JKLABRegisterMainViewModel alloc] init];
+    
+//    [self.model addObserver:self forKeyPath:@"productsInCart" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -27,6 +31,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+//{
+//    if (object == self.model) {
+//        self.uiProductQuantityLabel.text = [NSString stringWithFormat:@"Item: %d", self.model.numberOfProductsInCart];
+//        self.uiCheckoutPriceLabel.text = [NSString stringWithFormat:@"Total: $%.2f", self.model.checkoutPrice];
+//    }
+//}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

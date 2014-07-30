@@ -22,7 +22,7 @@
     return self;
 }
 
-- (CGFloat)numberOfProductsInCart
+- (NSUInteger)numberOfProductsInCart
 {
     return productsInCart.count;
 }

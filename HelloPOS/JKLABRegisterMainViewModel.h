@@ -10,6 +10,6 @@
 
 @interface JKLABRegisterMainViewModel : NSObject
 @property(nonatomic, retain) NSMutableArray *productsInCart;
-- (CGFloat) numberOfProductsInCart;
+- (NSUInteger) numberOfProductsInCart;
 - (CGFloat) checkoutPrice;
 @end
