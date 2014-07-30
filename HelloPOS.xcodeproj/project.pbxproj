@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2859511D19895E07001AF3AF /* JKLABSelectCustomerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2859511C19895E07001AF3AF /* JKLABSelectCustomerTableViewController.m */; };
+		2859512219896924001AF3AF /* JKLABHelloGatewaySalesService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2859512119896924001AF3AF /* JKLABHelloGatewaySalesService.m */; };
 		28BC6597198806B900035A3E /* JKLABProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BC6596198806B900035A3E /* JKLABProductCell.m */; };
 		62863D6F9AD6453C9B20AC90 /* libPods-HelloPOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D738E9EB29F4CB2B9106109 /* libPods-HelloPOS.a */; };
 		842386F41987762500074A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842386F31987762500074A56 /* Foundation.framework */; };
@@ -52,6 +53,8 @@
 		0D738E9EB29F4CB2B9106109 /* libPods-HelloPOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloPOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2859511B19895E07001AF3AF /* JKLABSelectCustomerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABSelectCustomerTableViewController.h; sourceTree = "<group>"; };
 		2859511C19895E07001AF3AF /* JKLABSelectCustomerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABSelectCustomerTableViewController.m; sourceTree = "<group>"; };
+		2859512019896924001AF3AF /* JKLABHelloGatewaySalesService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABHelloGatewaySalesService.h; sourceTree = "<group>"; };
+		2859512119896924001AF3AF /* JKLABHelloGatewaySalesService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABHelloGatewaySalesService.m; sourceTree = "<group>"; };
 		28BC6595198806B900035A3E /* JKLABProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABProductCell.h; sourceTree = "<group>"; };
 		28BC6596198806B900035A3E /* JKLABProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABProductCell.m; sourceTree = "<group>"; };
 		6ED98DDAE39B486780818884 /* Pods-HelloPOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloPOS.xcconfig"; path = "Pods/Pods-HelloPOS.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +124,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2859511E198968A0001AF3AF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2859511F198968D9001AF3AF /* HelloGateway */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		2859511F198968D9001AF3AF /* HelloGateway */ = {
+			isa = PBXGroup;
+			children = (
+				2859512019896924001AF3AF /* JKLABHelloGatewaySalesService.h */,
+				2859512119896924001AF3AF /* JKLABHelloGatewaySalesService.m */,
+			);
+			name = HelloGateway;
+			sourceTree = "<group>";
+		};
 		28BC659919880A7600035A3E /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				84B30FBD19890647004F6485 /* Model */,
+				2859511E198968A0001AF3AF /* Service */,
 				842387021987762500074A56 /* JKLABAppDelegate.h */,
 				842387031987762500074A56 /* JKLABAppDelegate.m */,
 				842387051987762500074A56 /* Main.storyboard */,
@@ -392,6 +413,7 @@
 				84B30F9C1987C3C5004F6485 /* JKLABRoundRectShadowButton.m in Sources */,
 				84B30FB219889A0D004F6485 /* JKLABMuliBoldLabel.m in Sources */,
 				28BC6597198806B900035A3E /* JKLABProductCell.m in Sources */,
+				2859512219896924001AF3AF /* JKLABHelloGatewaySalesService.m in Sources */,
 				842387001987762500074A56 /* main.m in Sources */,
 				84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */,
 				842387041987762500074A56 /* JKLABAppDelegate.m in Sources */,
