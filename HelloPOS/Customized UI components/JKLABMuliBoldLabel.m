@@ -1,14 +1,14 @@
 //
-//  JKLABRoundRectButton.m
+//  JKLABMuliBoldLabel.m
 //  HelloPOS
 //
-//  Created by admin on 29/7/14.
+//  Created by admin on 30/7/14.
 //  Copyright (c) 2014 jklab. All rights reserved.
 //
 
-#import "JKLABRoundRectButton.h"
+#import "JKLABMuliBoldLabel.h"
 
-@implementation JKLABRoundRectButton
+@implementation JKLABMuliBoldLabel
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -31,10 +31,7 @@
 
 - (void)customizeAppearance
 {
-    CALayer *layer = self.layer;
-    layer.cornerRadius = 3;
-    
-    UILabel *label = self.titleLabel;
+    UILabel *label = self;
     CGFloat labelFontSize = label.font.pointSize;
     UIFont *newFont = [UIFont fontWithName:@"Muli-Bold" size:labelFontSize];
     label.font = newFont;
