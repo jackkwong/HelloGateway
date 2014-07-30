@@ -23,7 +23,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.model = [[JKLABRegisterMainViewModel alloc] init];
     
-//    [self.model addObserver:self forKeyPath:@"productsInCart" options:NSKeyValueObservingOptionInitial|NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,13 +32,13 @@
 }
 
 
-//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-//{
-//    if (object == self.model) {
-//        self.uiProductQuantityLabel.text = [NSString stringWithFormat:@"Item: %d", self.model.numberOfProductsInCart];
-//        self.uiCheckoutPriceLabel.text = [NSString stringWithFormat:@"Total: $%.2f", self.model.checkoutPrice];
-//    }
-//}
+
+- (void)updateViewWithModel
+{
+    self.uiProductQuantityLabel.text = [NSString stringWithFormat:@"Item: %d", self.model.numberOfProductsInCart];
+    self.uiCheckoutPriceLabel.text = [NSString stringWithFormat:@"Total: $%.2f", self.model.checkoutPrice];
+}
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -60,6 +59,16 @@
         controller.registerMainViewController = self;
         
     }
+}
+
+
+- (IBAction)actionProcessSales:(id)sender {
+}
+- (IBAction)actionResetSales:(id)sender {
+    self.model.productsInCart = @[].mutableCopy;
+    [self updateViewWithModel];
+}
+- (IBAction)actionPushToQuickBooks:(id)sender {
 }
 
 @end

@@ -11,4 +11,6 @@
 
 @interface JKLABRegisterMainViewController : UIViewController
 @property(nonatomic, retain) JKLABRegisterMainViewModel *model;
+
+- (void)updateViewWithModel;
 @end
