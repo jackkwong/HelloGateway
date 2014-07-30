@@ -33,6 +33,7 @@
 		84B30FAE19889449004F6485 /* Muli-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B30FAA19888FE6004F6485 /* Muli-Regular.ttf */; };
 		84B30FAF1988944C004F6485 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84B30FAB19888FE6004F6485 /* Muli.ttf */; };
 		84B30FB219889A0D004F6485 /* JKLABMuliBoldLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B30FB119889A0D004F6485 /* JKLABMuliBoldLabel.m */; };
+		84B30FB81988D804004F6485 /* JKLABProductImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B30FB71988D804004F6485 /* JKLABProductImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		84B30FAB19888FE6004F6485 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
 		84B30FB019889A0D004F6485 /* JKLABMuliBoldLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JKLABMuliBoldLabel.h; path = "Customized UI components/JKLABMuliBoldLabel.h"; sourceTree = "<group>"; };
 		84B30FB119889A0D004F6485 /* JKLABMuliBoldLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JKLABMuliBoldLabel.m; path = "Customized UI components/JKLABMuliBoldLabel.m"; sourceTree = "<group>"; };
+		84B30FB61988D804004F6485 /* JKLABProductImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKLABProductImageView.h; sourceTree = "<group>"; };
+		84B30FB71988D804004F6485 /* JKLABProductImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKLABProductImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 		84B30F8B19879049004F6485 /* Customized UI components */ = {
 			isa = PBXGroup;
 			children = (
+				84B30FB61988D804004F6485 /* JKLABProductImageView.h */,
+				84B30FB71988D804004F6485 /* JKLABProductImageView.m */,
 				84B30FB019889A0D004F6485 /* JKLABMuliBoldLabel.h */,
 				84B30FB119889A0D004F6485 /* JKLABMuliBoldLabel.m */,
 				84B30F9A1987C3C5004F6485 /* JKLABRoundRectShadowButton.h */,
@@ -372,6 +377,7 @@
 				842387001987762500074A56 /* main.m in Sources */,
 				84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */,
 				842387041987762500074A56 /* JKLABAppDelegate.m in Sources */,
+				84B30FB81988D804004F6485 /* JKLABProductImageView.m in Sources */,
 				8423870A1987762500074A56 /* JKLABViewController.m in Sources */,
 				84B30F8A19879040004F6485 /* JKLABRoundRectButton.m in Sources */,
 			);
