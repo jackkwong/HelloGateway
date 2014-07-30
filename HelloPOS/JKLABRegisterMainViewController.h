@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKLABRegisterMainViewModel.h"
 
 @interface JKLABRegisterMainViewController : UIViewController
-
+@property(nonatomic, retain) JKLABRegisterMainViewModel *model;
 @end

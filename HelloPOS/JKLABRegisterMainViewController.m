@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    self.model = [[JKLABRegisterMainViewModel alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,6 +43,7 @@
         
         JKLABProductViewController *controller = segue.destinationViewController;
         controller.productData = dummyProductData;
+        controller.registerMainViewController = self;
         
     }
 }

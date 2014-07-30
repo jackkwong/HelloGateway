@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JKLABRegisterMainViewController.h"
 
 @interface JKLABProductViewController : UICollectionViewController<UICollectionViewDataSource>
 @property(nonatomic, retain) NSArray *productData;
+@property(nonatomic, retain) JKLABRegisterMainViewController *registerMainViewController;
 @end

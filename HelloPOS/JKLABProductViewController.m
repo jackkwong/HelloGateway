@@ -16,6 +16,8 @@
 @implementation JKLABProductViewController
 
 @synthesize productData;
+@synthesize registerMainViewController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +39,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 
@@ -67,6 +71,31 @@
 {
     return 30;
 }
+
+
+
+
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger i = indexPath.row;
+    NSUInteger numberOfProductsInCurrentPage = productData.count;
+    NSUInteger lastProductIndex = numberOfProductsInCurrentPage - 1;
+    
+    if (i > lastProductIndex ) {
+        return;
+    }
+    
+    NSDictionary *product = productData[i];
+    
+    NSLog(@"%@", product);
+    [self.registerMainViewController.model.productsInCart addObject:product];
+    NSLog(@"%f", [self.registerMainViewController.model checkoutPrice]);
+}
+
+
+
 
 
 /*
