@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 jklab. All rights reserved.
 //
 
-#import "JKLABViewController.h"
+#import "JKLABRegisterMainViewController.h"
 #import "JKLABProductViewController.h"
 
-@interface JKLABViewController ()
+@interface JKLABRegisterMainViewController ()
 
 @end
 
-@implementation JKLABViewController
+@implementation JKLABRegisterMainViewController
 
 - (void)viewDidLoad
 {

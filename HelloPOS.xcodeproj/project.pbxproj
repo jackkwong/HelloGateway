@@ -16,7 +16,7 @@
 		842387001987762500074A56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842386FF1987762500074A56 /* main.m */; };
 		842387041987762500074A56 /* JKLABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842387031987762500074A56 /* JKLABAppDelegate.m */; };
 		842387071987762500074A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842387051987762500074A56 /* Main.storyboard */; };
-		8423870A1987762500074A56 /* JKLABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842387091987762500074A56 /* JKLABViewController.m */; };
+		8423870A1987762500074A56 /* JKLABRegisterMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842387091987762500074A56 /* JKLABRegisterMainViewController.m */; };
 		8423870C1987762500074A56 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8423870B1987762500074A56 /* Images.xcassets */; };
 		842387131987762500074A56 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842387121987762500074A56 /* XCTest.framework */; };
 		842387141987762500074A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842386F31987762500074A56 /* Foundation.framework */; };
@@ -62,8 +62,8 @@
 		842387021987762500074A56 /* JKLABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKLABAppDelegate.h; sourceTree = "<group>"; };
 		842387031987762500074A56 /* JKLABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKLABAppDelegate.m; sourceTree = "<group>"; };
 		842387061987762500074A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		842387081987762500074A56 /* JKLABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKLABViewController.h; sourceTree = "<group>"; };
-		842387091987762500074A56 /* JKLABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKLABViewController.m; sourceTree = "<group>"; };
+		842387081987762500074A56 /* JKLABRegisterMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JKLABRegisterMainViewController.h; sourceTree = "<group>"; };
+		842387091987762500074A56 /* JKLABRegisterMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKLABRegisterMainViewController.m; sourceTree = "<group>"; };
 		8423870B1987762500074A56 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		842387111987762500074A56 /* HelloPOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloPOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842387121987762500074A56 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -165,8 +165,8 @@
 				28BC6596198806B900035A3E /* JKLABProductCell.m */,
 				84B30FA01987D2F6004F6485 /* JKLABProductViewController.h */,
 				84B30FA11987D2F6004F6485 /* JKLABProductViewController.m */,
-				842387081987762500074A56 /* JKLABViewController.h */,
-				842387091987762500074A56 /* JKLABViewController.m */,
+				842387081987762500074A56 /* JKLABRegisterMainViewController.h */,
+				842387091987762500074A56 /* JKLABRegisterMainViewController.m */,
 				8423870B1987762500074A56 /* Images.xcassets */,
 				84B30F8B19879049004F6485 /* Customized UI components */,
 				842386FA1987762500074A56 /* Supporting Files */,
@@ -378,7 +378,7 @@
 				84B30FA21987D2F6004F6485 /* JKLABProductViewController.m in Sources */,
 				842387041987762500074A56 /* JKLABAppDelegate.m in Sources */,
 				84B30FB81988D804004F6485 /* JKLABProductImageView.m in Sources */,
-				8423870A1987762500074A56 /* JKLABViewController.m in Sources */,
+				8423870A1987762500074A56 /* JKLABRegisterMainViewController.m in Sources */,
 				84B30F8A19879040004F6485 /* JKLABRoundRectButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
