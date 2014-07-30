@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JKLABProductViewController : UICollectionViewController<UICollectionViewDataSource>
-
+@property(nonatomic, retain) NSArray *productData;
 @end

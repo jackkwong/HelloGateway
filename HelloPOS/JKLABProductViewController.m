@@ -9,15 +9,13 @@
 #import "JKLABProductViewController.h"
 #import "JKLABProductCell.h"
 
-
-static NSArray *PRODUCT_DATA;
-
-
 @interface JKLABProductViewController ()
 
 @end
 
 @implementation JKLABProductViewController
+
+@synthesize productData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +30,6 @@ static NSArray *PRODUCT_DATA;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self initData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,26 +40,10 @@ static NSArray *PRODUCT_DATA;
 
 
 
-
-- (void)initData
-{
-    PRODUCT_DATA = @[
-                     
-                     @{@"image": @"sample_product_icon1", @"price": @46.5},
-                     @{@"image": @"sample_product_icon2", @"price": @61.2},
-                     @{@"image": @"sample_product_icon3", @"price": @200},
-                     @{@"image": @"sample_product_icon4", @"price": @99.9}
-                     
-                     ];
-}
-
-
-
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger i = indexPath.row;
-    NSUInteger numberOfProductsInCurrentPage = PRODUCT_DATA.count;
+    NSUInteger numberOfProductsInCurrentPage = productData.count;
     NSUInteger lastProductIndex = numberOfProductsInCurrentPage - 1;
     
     if (i > lastProductIndex ) {
@@ -70,7 +51,7 @@ static NSArray *PRODUCT_DATA;
         return cell;
     }
     
-    NSDictionary *product = PRODUCT_DATA[i];
+    NSDictionary *product = productData[i];
     
     JKLABProductCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"ProductCell" forIndexPath:indexPath];
     cell.uiProductImageView.image = [UIImage imageNamed:product[@"image"] ];
