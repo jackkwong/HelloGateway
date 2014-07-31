@@ -18,8 +18,8 @@ static NSString *GATEWAY_HOST = @"http://hellogateway.herokuapp.com";
 {
     NSString *url = [NSString stringWithFormat:@"%@/api/v1/sales", GATEWAY_HOST];
     NSDictionary *parameters = @{
-                                 @"sale[customerId]": customerId,
-                                 @"sale[quantity]": [NSNumber numberWithUnsignedInteger:quantity],
+                                 @"sale[customer_id]": customerId,
+                                 @"sale[total_quantity]": [NSNumber numberWithUnsignedInteger:quantity],
                                  @"sale[amount]": [NSNumber numberWithFloat:amount]
                                  };
     PMKPromise *promise = [NSURLConnection POST:url formURLEncodedParameters:parameters];
