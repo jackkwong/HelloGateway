@@ -100,6 +100,7 @@
         UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Sales sent to gateway" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [successAlertView show];
         [model clearData];
+        [self updateViewWithModel];
         
     }).catch(^(NSError *err){
         
