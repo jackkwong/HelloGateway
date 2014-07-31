@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="U4Z-Mv-nOY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="U4Z-Mv-nOY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -142,21 +142,46 @@
                                     <segue destination="F9a-33-ehj" kind="embed" identifier="EmbedProduct" id="lJk-uj-dWQ"/>
                                 </connections>
                             </containerView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBg-gp-7sN" userLabel="loading indicator">
+                                <rect key="frame" x="406" y="342" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kig-4C-OyX">
+                                        <rect key="frame" x="32" y="32" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="kig-4C-OyX" secondAttribute="centerX" id="EWn-nO-L9j"/>
+                                    <constraint firstAttribute="centerY" secondItem="kig-4C-OyX" secondAttribute="centerY" id="ULx-qe-NQC"/>
+                                    <constraint firstAttribute="height" constant="100" id="aeV-yi-JDi"/>
+                                    <constraint firstAttribute="width" constant="100" id="fcH-NQ-LZK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94117653369903564" green="0.94117653369903564" blue="0.94117653369903564" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="SBg-gp-7sN" secondAttribute="centerX" constant="56" id="JdH-n7-s95"/>
                             <constraint firstItem="F37-DH-0vZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Ko5-08-DxR"/>
                             <constraint firstItem="y1B-lE-5cC" firstAttribute="leading" secondItem="X2K-w4-MJu" secondAttribute="trailing" constant="15" id="R6a-1K-fYN"/>
                             <constraint firstItem="X2K-w4-MJu" firstAttribute="top" secondItem="y1B-lE-5cC" secondAttribute="top" id="U78-hv-dSG"/>
                             <constraint firstItem="X2K-w4-MJu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="ZvD-dX-jM9"/>
                             <constraint firstItem="X2K-w4-MJu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="etV-zy-QVX"/>
                             <constraint firstItem="F37-DH-0vZ" firstAttribute="top" secondItem="X2K-w4-MJu" secondAttribute="bottom" constant="15" id="p90-wf-NGL"/>
+                            <constraint firstAttribute="centerY" secondItem="SBg-gp-7sN" secondAttribute="centerY" constant="-8" id="puV-kq-2tL"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="lZO-ON-YdD"/>
                     <connections>
                         <outlet property="uiCheckoutPriceLabel" destination="WBw-1A-y8R" id="QqX-C5-lEK"/>
+                        <outlet property="uiLoadingIndicator" destination="SBg-gp-7sN" id="JAV-Zl-cg5"/>
                         <outlet property="uiProductQuantityLabel" destination="zp0-Un-VnB" id="Kml-Xr-0yK"/>
                     </connections>
                 </viewController>

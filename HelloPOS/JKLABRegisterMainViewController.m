@@ -14,6 +14,7 @@
 @interface JKLABRegisterMainViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *uiProductQuantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *uiCheckoutPriceLabel;
+@property (weak, nonatomic) IBOutlet UIView *uiLoadingIndicator;
 
 @end
 
@@ -42,6 +43,22 @@
     self.uiProductQuantityLabel.text = [NSString stringWithFormat:@"Item: %d", self.model.numberOfProductsInCart];
     self.uiCheckoutPriceLabel.text = [NSString stringWithFormat:@"Total: $%.2f", self.model.checkoutPrice];
 }
+
+
+-(void)switchViewToLoadingMode
+{
+    self.view.userInteractionEnabled = NO;
+    self.uiLoadingIndicator.hidden = NO;
+}
+
+-(void)switchViewToReadyMode
+{
+    self.view.userInteractionEnabled = YES;
+    self.uiLoadingIndicator.hidden = YES;
+}
+
+
+
 
 
 
@@ -81,15 +98,30 @@
 }
 
 
+
+
+
+// UI event handlers
+
 - (IBAction)actionProcessSales:(id)sender {
+    
+    [self switchViewToLoadingMode];
     
     NSString *customerId = model.customerId;
     NSUInteger quantity = [model numberOfProductsInCart];
     CGFloat amount = [model checkoutPrice];
     
     if (customerId == nil) {
-        UIAlertView *validationAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Please select a customer" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *validationAlertView = [[UIAlertView alloc] initWithTitle:@"Notice" message:@"Please select a customer" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [validationAlertView show];
+        [self switchViewToReadyMode];
+        return;
+    }
+    
+    if (quantity < 1) {
+        UIAlertView *validationAlertView = [[UIAlertView alloc] initWithTitle:@"Notice" message:@"Please add a product" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [validationAlertView show];
+        [self switchViewToReadyMode];
         return;
     }
     
@@ -109,16 +141,24 @@
         [failureAlertView show];
         NSLog(@"%@", errorMessage);
         
+    }).finally(^{
+        
+        [self switchViewToReadyMode];
+        
     });
     
 }
+
 
 - (IBAction)actionResetSales:(id)sender {
     [self.model clearData];
     [self updateViewWithModel];
 }
 
+
 - (IBAction)actionPushToQuickBooks:(id)sender {
+    
+    [self switchViewToLoadingMode];
     
     PMKPromise *promise = [JKLABHelloGatewaySalesService pushDataToQuickBooks];
     
@@ -133,6 +173,10 @@
         UIAlertView *failureAlertView = [[UIAlertView alloc] initWithTitle:@"Failure" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [failureAlertView show];
         NSLog(@"%@", errorMessage);
+        
+    }).finally(^{
+        
+        [self switchViewToReadyMode];
         
     });
     
