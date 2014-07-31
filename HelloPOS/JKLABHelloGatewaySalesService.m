@@ -8,7 +8,7 @@
 
 #import "JKLABHelloGatewaySalesService.h"
 #import <PromiseKit.h>
-#import <PromiseKit+Foundation.h>
+#import <Foundation+PromiseKit.h>
 
 static NSString *GATEWAY_HOST = @"http://hellogateway.herokuapp.com";
 
