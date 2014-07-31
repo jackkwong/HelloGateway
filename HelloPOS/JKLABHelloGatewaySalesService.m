@@ -16,7 +16,7 @@ static NSString *GATEWAY_HOST = @"http://hellogateway.herokuapp.com";
 
 +(PMKPromise *) sendToGatewaySalesWithCustomerId:(NSString *)customerId Quantity:(NSUInteger)quantity Amount:(CGFloat)amount
 {
-    NSString *url = [NSString stringWithFormat:@"%@/api/v1/sales", GATEWAY_HOST];
+    NSString *url = [NSString stringWithFormat:@"%@/api/v1/sales.json", GATEWAY_HOST];
     NSDictionary *parameters = @{
                                  @"sale[customer_id]": customerId,
                                  @"sale[total_quantity]": [NSNumber numberWithUnsignedInteger:quantity],
@@ -28,7 +28,7 @@ static NSString *GATEWAY_HOST = @"http://hellogateway.herokuapp.com";
 
 + (PMKPromise *)pushDataToQuickBooks
 {
-    NSString *url = [NSString stringWithFormat:@"%@/api/v1/sales/flush", GATEWAY_HOST];
+    NSString *url = [NSString stringWithFormat:@"%@/api/v1/sales/flush.json", GATEWAY_HOST];
     PMKPromise *promise = [NSURLConnection GET:url];
     return promise;
 }

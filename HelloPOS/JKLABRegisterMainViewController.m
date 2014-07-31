@@ -9,6 +9,7 @@
 #import "JKLABRegisterMainViewController.h"
 #import "JKLABProductViewController.h"
 #import "JKLABSelectCustomerTableViewController.h"
+#import "JKLABHelloGatewaySalesService.h"
 
 @interface JKLABRegisterMainViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *uiProductQuantityLabel;
@@ -17,6 +18,8 @@
 @end
 
 @implementation JKLABRegisterMainViewController
+
+@synthesize model;
 
 - (void)viewDidLoad
 {
@@ -79,12 +82,59 @@
 
 
 - (IBAction)actionProcessSales:(id)sender {
+    
+    NSString *customerId = model.customerId;
+    NSUInteger quantity = [model numberOfProductsInCart];
+    CGFloat amount = [model checkoutPrice];
+    
+    if (customerId == nil) {
+        UIAlertView *validationAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Please select a customer" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [validationAlertView show];
+        return;
+    }
+    
+    PMKPromise *promise = [JKLABHelloGatewaySalesService sendToGatewaySalesWithCustomerId:customerId Quantity:quantity Amount:amount];
+    
+    promise.then(^{
+        
+        UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Sales sent to gateway" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [successAlertView show];
+        [model clearData];
+        
+    }).catch(^(NSError *err){
+        
+        NSString *errorMessage = [NSString stringWithFormat:@"%@", err];
+        UIAlertView *failureAlertView = [[UIAlertView alloc] initWithTitle:@"Failure" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [failureAlertView show];
+        NSLog(@"%@", errorMessage);
+        
+    });
+    
 }
+
 - (IBAction)actionResetSales:(id)sender {
     [self.model clearData];
     [self updateViewWithModel];
 }
+
 - (IBAction)actionPushToQuickBooks:(id)sender {
+    
+    PMKPromise *promise = [JKLABHelloGatewaySalesService pushDataToQuickBooks];
+    
+    promise.then(^{
+        
+        UIAlertView *successAlertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Data successfully pushed to QuickBooks" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [successAlertView show];
+        
+    }).catch(^(NSError *err){
+        
+        NSString *errorMessage = [NSString stringWithFormat:@"%@", err];
+        UIAlertView *failureAlertView = [[UIAlertView alloc] initWithTitle:@"Failure" message:errorMessage delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [failureAlertView show];
+        NSLog(@"%@", errorMessage);
+        
+    });
+    
 }
 
 @end
